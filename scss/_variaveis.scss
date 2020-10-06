@@ -1,0 +1,44 @@
+$cor-principal: #7A2F20;
+$cor-secundaria: #472115;
+$cor-fundo: #FBAC94;
+$fonte-primaria: 'Arvo',
+serif;
+$fonte-secundaria: 'Sansita Swashed',
+cursive;
+@function em($pixel, $contexto: 16) {
+    @return $pixel / $contexto+em;
+}
+
+@mixin tipo-1($size) {
+    font-family: $fonte-primaria;
+    @if $size==18 {
+        font-size: em(18);
+        line-height: em(30, 18);
+    }
+}
+
+@mixin tipo-2($size) {
+    font-family: $fonte-secundaria;
+    @if $size==18 {
+        font-size: em(18);
+        line-height: em(30, 18);
+    }
+    @else if $size==24 {
+        font-size: em(24);
+        line-height: em(30, 24);
+    }
+    @else if $size==32 {
+        font-size: em(32);
+        line-height: em(30, 32);
+    }
+    @else if $size==44 {
+        font-size: em(44);
+        line-height: em(30, 44);
+    }
+}
+
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}

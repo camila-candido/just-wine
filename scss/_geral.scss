@@ -1,0 +1,18 @@
+    body {
+        background: $cor-fundo;
+    }
+    
+    h1 {
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        @include tipo-2(44);
+        &:after {
+            content: '';
+            display: block;
+            width: 10%;
+            height: 2px;
+            background: $cor-principal;
+            margin: 20px auto;
+        }
+    }

@@ -1,0 +1,62 @@
+.contato {
+    margin-top: 80px;
+    width: 50%;
+}
+
+.contato h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    @include tipo-2(44);
+    &:after {
+        content: '';
+        display: block;
+        width: 10%;
+        height: 2px;
+        background: $cor-principal;
+        margin: 20px auto;
+    }
+}
+
+.contato form {
+    display: block;
+    label {
+        @include tipo-1(18);
+    }
+    input[type="text"],
+    textarea {
+        @include tipo-1(18);
+        color: $cor-principal;
+        width: 100%;
+        padding: 0 5px;
+        height: 40px;
+        border: 2px solid $cor-principal;
+        background: transparent;
+        margin-bottom: 1em;
+        &:hover,
+        &:focus {
+            outline: none;
+            border-color: black;
+        }
+    }
+    textarea {
+        height: 120px;
+    }
+}
+
+.contato button {
+    text-transform: uppercase;
+    display: block;
+    width: 200px;
+    cursor: pointer;
+    color: $cor-principal;
+    background: transparent;
+    padding: 10px 10px;
+    border: 2px solid $cor-principal;
+    border-radius: 5%;
+    @include box-shadow(5px 5px 0 -2px $cor-principal, 5px 5px 0 0 $cor-secundaria);
+    transition: .3s;
+    &:hover {
+        @include box-shadow(3px 3px 0 -2px $cor-principal, 3px 3px 0 0 $cor-secundaria);
+    }
+    margin-bottom: 50px;
+}

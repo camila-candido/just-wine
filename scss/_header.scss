@@ -1,0 +1,16 @@
+header {
+    background: $cor-principal;
+    color: white;
+}
+
+header ul a {
+    text-decoration: none;
+    color: white;
+    float: left;
+    padding: 20px 10px;
+    @include tipo-1(18);
+    &:first-child {
+        margin-right: 690px;
+        @include tipo-1(24);
+    }
+}

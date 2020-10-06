@@ -1,0 +1,32 @@
+.intro {
+    margin-top: 80px;
+}
+
+.intro img {
+    border: 6px solid $cor-principal;
+}
+
+.intro p {
+    color: #000;
+    @include tipo-2(24);
+    letter-spacing: 1px;
+}
+
+.intro p:first-child {
+    color: white;
+    @include tipo-2(44);
+    margin-bottom: 30px;
+}
+
+.intro p:nth-child(2) {
+    margin-top: 50px;
+    &:after {
+        content: '';
+        display: block;
+        width: 65%;
+        height: 2px;
+        background: $cor-principal;
+        margin-top: 14px;
+        margin-bottom: 8px;
+    }
+}

@@ -1,0 +1,43 @@
+.produtos {
+    margin-top: 80px;
+    p {
+        margin-top: 20px;
+        @include tipo-1(18);
+    }
+}
+
+.produtos h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    @include tipo-2(44);
+    &:after {
+        content: '';
+        display: block;
+        width: 10%;
+        height: 2px;
+        background: $cor-principal;
+        margin: 20px auto;
+    }
+}
+
+.produtos h2 {
+    @include tipo-2(32);
+}
+
+.produtos p {
+    margin: 20px 10px;
+}
+
+.produtos img {
+    margin-top: 55px;
+    margin-left: 50px;
+    width: 200px;
+    height: 200px;
+    border: 5px solid $cor-principal;
+    border-radius: 5%;
+}
+
+.branco,
+.rose {
+    margin-top: 30px;
+}
